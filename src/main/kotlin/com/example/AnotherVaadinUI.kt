@@ -1,3 +1,5 @@
+package com.example
+
 import com.vaadin.annotations.Theme
 import com.vaadin.server.VaadinRequest
 import com.vaadin.spring.annotation.SpringUI
