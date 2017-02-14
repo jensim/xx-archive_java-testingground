@@ -1,4 +1,4 @@
-package se.jensim.layout
+package se.jensim.view
 
 import com.vaadin.navigator.View
 import com.vaadin.navigator.ViewChangeListener

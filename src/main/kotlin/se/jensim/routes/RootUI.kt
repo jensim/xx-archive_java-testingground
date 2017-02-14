@@ -1,6 +1,6 @@
 package se.jensim.routes
 
-import se.jensim.layout.MainMenu
+import se.jensim.components.MainMenu
 import com.vaadin.annotations.Theme
 import com.vaadin.navigator.View
 import com.vaadin.navigator.ViewDisplay
@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired
 @Theme("valo")
 @SpringUI(path = "/")
 @SpringViewDisplay
-class MyVaadinUI : UI(), ViewDisplay {
+class RootUI : UI(), ViewDisplay {
 
     @Autowired
     private lateinit var menu: MainMenu
