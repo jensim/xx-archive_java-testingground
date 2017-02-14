@@ -1,6 +1,5 @@
-package com.example.layout
+package se.jensim.layout
 
-import com.example.routes.MyVaadinUI
 import com.vaadin.navigator.View
 import com.vaadin.navigator.ViewChangeListener
 import com.vaadin.spring.annotation.SpringView
@@ -9,10 +8,12 @@ import com.vaadin.ui.Label
 import com.vaadin.ui.TextField
 import com.vaadin.ui.VerticalLayout
 
-@SpringView(name = "order", ui = arrayOf(MyVaadinUI::class))
-class OrderLayout : VerticalLayout(), View {
+@SpringView(name = OrderView.VIEW_NAME)
+class OrderView : VerticalLayout(), View {
 
-    val NAVSTR: String = "ORDER"
+    companion object {
+        const val VIEW_NAME = "order"
+    }
 
     private val nameField = TextField()
     private val addressField = TextField()
@@ -20,8 +21,6 @@ class OrderLayout : VerticalLayout(), View {
     private val phoneField = TextField()
 
     init {
-//        addressField.addValidator { e -> e. }
-
         addComponent(HorizontalLayout(Label("Name"), nameField))
         addComponent(HorizontalLayout(Label("Address"), addressField))
         addComponent(HorizontalLayout(Label("City"), cityField))
@@ -31,9 +30,5 @@ class OrderLayout : VerticalLayout(), View {
     }
 
     override fun enter(event: ViewChangeListener.ViewChangeEvent?) {
-    }
-
-    fun reset() {
-        nameField.value = ""
     }
 }

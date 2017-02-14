@@ -1,6 +1,6 @@
-package com.example.routes
+package se.jensim.routes
 
-import com.example.layout.MainMenu
+import se.jensim.layout.MainMenu
 import com.vaadin.annotations.Theme
 import com.vaadin.navigator.View
 import com.vaadin.navigator.ViewDisplay

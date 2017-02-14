@@ -1,4 +1,4 @@
-package com.example.service
+package se.jensim.service
 
 import org.springframework.stereotype.Service
 

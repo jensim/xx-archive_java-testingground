@@ -26,7 +26,7 @@ apply plugin: 'docker'
 
 
 springBoot {
-	mainClass = 'com.example.DemoApplicationKt'
+	mainClass = 'se.jensim.MyApplicationKt'
 }
 
 jar {
