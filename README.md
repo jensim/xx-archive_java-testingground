@@ -4,8 +4,8 @@ This project is one to get attacked by me testing new features out
 # Running in dev
 ````
 #First console
-bash> gradlew.bat build --continuous
-bat$> ./gradlew build --continuous
+bash> ./gradlew build --continuous
+bat$> gradlew.bat build --continuous
 
 ````
 ````

@@ -1,5 +1,7 @@
 package se.jensim.domain
 
-/**
- * Created by jens on 2017-02-25.
- */
+import java.io.Serializable
+
+data class PhoneNumber(
+        var number: String = "")
+    : Serializable

@@ -1,5 +1,10 @@
 package se.jensim.domain
 
-/**
- * Created by jens on 2017-02-25.
- */
+import java.io.Serializable
+
+data class Address(
+        var streetAddress: String = "",
+        var city: String = "",
+        var postalCode: String = "",
+        var country: String = "")
+    : Serializable
