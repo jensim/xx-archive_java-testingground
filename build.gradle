@@ -44,7 +44,7 @@ repositories {
 
 
 dependencies {
-	compile('com.vaadin:vaadin-spring-boot-starter:1.2.0')
+	compile('com.vaadin:vaadin-spring-boot-starter:2.0.0')
 	compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
@@ -52,7 +52,7 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "com.vaadin:vaadin-bom:7.7.5"
+		mavenBom "com.vaadin:vaadin-bom:8.0.0"
 	}
 }
 
