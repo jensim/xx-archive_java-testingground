@@ -16,6 +16,10 @@ buildscript {
 	}
 }
 
+configurations {
+	dev
+}
+
 group = 'jensim'
 
 apply plugin: 'kotlin'
@@ -47,13 +51,21 @@ dependencies {
 	compile('com.vaadin:vaadin-spring-boot-starter:2.0.0')
 	compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+	dev("org.springframework.boot:spring-boot-devtools")
 }
 
 dependencyManagement {
 	imports {
 		mavenBom "com.vaadin:vaadin-bom:8.0.0"
 	}
+}
+
+bootRun {
+	// Use Spring Boot DevTool only when we run Gradle bootRun task
+	classpath = sourceSets.main.runtimeClasspath + configurations.dev
 }
 
 task buildDocker(type: Docker, dependsOn: build) {
