@@ -1,3 +1,5 @@
 package se.jensim.domain
 
-class People(map:Map<String, Person>): Map<String, Person> by map
+import java.util.*
+
+class People : Map<String, Person> by HashMap<String,Person>()
