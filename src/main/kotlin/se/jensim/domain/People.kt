@@ -1,5 +1,6 @@
 package se.jensim.domain
 
-import java.util.*
-
-class People : Map<String, Person> by HashMap<String,Person>()
+class People(people: Set<Person>) : Set<Person> by people{
+    constructor() : this(emptySet())
+    constructor(people: List<Person>) : this(people.toSet())
+}
