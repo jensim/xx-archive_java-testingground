@@ -2,6 +2,12 @@ buildscript {
 	ext {
 		kotlinVersion = '1.0.6'
 		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
+		vaadinSpringBootStarterVersion = '2.0.0'
+		vaadinBomVersion = '8.0.0'
+
+		gradeleDockerVersion = '1.2'
+
+		junitVersion = '4.12'
 	}
 	repositories {
 		mavenCentral()
@@ -12,7 +18,7 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-		classpath('se.transmode.gradle:gradle-docker:1.2')
+		classpath("se.transmode.gradle:gradle-docker:${gradeleDockerVersion}")
 	}
 }
 
@@ -27,10 +33,11 @@ apply plugin: 'kotlin-spring'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'docker'
+apply plugin: "io.spring.dependency-management"
 
 
 springBoot {
-	mainClass = 'se.jensim.MyApplicationKt'
+//	mainClass = 'se.jensim.MyApplicationKt'
 }
 
 jar {
@@ -48,19 +55,19 @@ repositories {
 
 
 dependencies {
-	compile('com.vaadin:vaadin-spring-boot-starter:2.0.0')
+	compile("com.vaadin:vaadin-spring-boot-starter:${vaadinSpringBootStarterVersion}")
 	compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	testCompile('junit:junit:4.12')
+	testCompile("junit:junit:${junitVersion}")
 
 	dev("org.springframework.boot:spring-boot-devtools")
 }
 
 dependencyManagement {
 	imports {
-		mavenBom "com.vaadin:vaadin-bom:8.0.0"
+		mavenBom "com.vaadin:vaadin-bom:${vaadinBomVersion}"
 	}
 }
 
