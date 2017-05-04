@@ -1,6 +1,8 @@
 # testingground
 This project is one to get attacked by me testing new features out
 
+[![Build Status](https://travis-ci.org/jensim/testingground-vaadin-kotlin-spring.svg?branch=master)](https://travis-ci.org/jensim/testingground-vaadin-kotlin-spring)
+
 # Running in dev
 ````
 #First console
