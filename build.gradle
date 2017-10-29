@@ -1,9 +1,9 @@
 buildscript {
 	ext {
-		kotlinVersion = '1.1.2'
-		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
+		kotlinVersion = '1.1.50'
+		springBootVersion = '2.0.0.M5'
 		vaadinSpringBootStarterVersion = '2.0.1'
-		vaadinBomVersion = '8.0.5'
+		vaadinBomVersion = '8.1.6'
 
 		gradeleDockerVersion = '1.2'
 
@@ -73,7 +73,7 @@ dependencyManagement {
 
 bootRun {
 	// Use Spring Boot DevTool only when we run Gradle bootRun task
-	classpath = sourceSets.main.runtimeClasspath + configurations.dev
+	//classpath = sourceSets.main.runtimeClasspath + configurations.dev
 }
 
 task buildDocker(type: Docker, dependsOn: build) {
