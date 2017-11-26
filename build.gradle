@@ -1,8 +1,8 @@
 buildscript {
 	ext {
-		kotlinVersion = '1.1.50'
-		springBootVersion = '2.0.0.M5'
-		vaadinSpringBootStarterVersion = '2.0.1'
+		kotlinVersion = '1.1.61'
+		springBootVersion = '2.0.0.M6'
+		vaadinSpringBootStarterVersion = '2.1-SNAPSHOT'
 		vaadinBomVersion = '8.1.6'
 
 		gradeleDockerVersion = '1.2'
